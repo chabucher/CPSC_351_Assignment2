@@ -28,9 +28,10 @@ PCB* FCFS::Dequeue ()
 // Processes a tick, which updates PCB waiting statistics  
 void FCFS::ProcessTick()
 {
-    for(auto const& i : readyQueue)
+    std::list<PCB *>::iterator it;
+    for(it = readyQueue.begin(); it != readyQueue.end(); ++it)
     {
-        i->_waitTicks++;
+	 (*it)->_waitTicks++;
     }
 }
 		
