@@ -6,7 +6,7 @@ CC = g++
 INCLUDE =
 #LIBS = -lm
 
-assignment2:${OBJS}
+schedulers:${OBJS}
 	${CC} ${CFLAGS} ${INCLUDES} -o $@ ${OBJS}
 
 clean:
